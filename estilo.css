@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+:root{
+    --cor0:#0B0C0D;
+    --cor1:#3F6F8C;
+    --cor2:#7292A6;
+    --cor3:#3F4F59;
+    --cor4:#C9E2F2;
+    --font: 'Montserrat';
+}
+
+body, html{
+    background-color: var(--cor1);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+main.formulario, #confirm, #sucesso{
+    position: absolute;
+    background-color: var(--cor4);
+    opacity: 0.9;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+}
+
+h1{
+    text-align: center;
+}
+
+#sucesso>h1{
+    font-size: 1.3em;
+
+}
+
+#confirm, #sucesso{
+    display: none;
+}
+
+#confirm>p{
+    text-align: left;
+}
+
+
+div.input>label{
+    position: absolute;
+    left: 0;
+    font-size: 1.1em;
+    padding: 7px 15px;
+    pointer-events: none;
+    transition: 0.5s;
+    letter-spacing: 0.1em;
+    color: rgba(0, 0, 0, 0.774);
+}
+
+div.input{
+    position: relative;  
+    margin: 15px auto;
+    width: 400px;
+    
+}
+
+div.input>input{
+    background: transparent;
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: none;
+    padding: 4px 15px;
+    border-bottom: 1px  solid rgba(0, 0, 0, 0.568);
+
+    font-size: 1em; 
+}
+
+.input>input:focus ~ label, .input>input:valid ~ label {
+    color: rgb(255, 255, 255);
+    font-size: 0.75em;
+    transform: translateX(20px) translateY(-7px);
+    padding: 0 5px;
+    background-color: var(--cor1);
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+.input>input:focus{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.view, .view2{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    height: 20px;
+    width: 20px;
+    font-size: 1em;
+    font-weight: 300;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor1);
+    color: var(--cor4);
+    border: 1px solid var(--cor1);
+}
+div.botao{
+    margin: auto;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div.botao>button{
+    background-color: var(--cor1);
+    color: white;
+    width: 120px;
+    height: 30px;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 3px 3px 5px var(--cor0);
+}
+
+div.botao>button:hover{
+    background-color: var(--cor4);
+    color: var(--cor1);
+    border: 1px solid var(--cor1);
+    box-shadow: none;
+}

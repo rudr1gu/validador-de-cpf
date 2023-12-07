@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <main class="formulario">
+        <h1>Registro</h1>
+        <form autocomplete="on" onsubmit="valid(); return false">
+            <div class="input">
+                <input type="text" id="iname" name="nome" autocomplete="name" required>
+                <label for="iname"><i class='bx bxs-user'></i> Nome Completo</label>
+            </div>
+            <div class="input">
+                <input type="email" id="iemail" name="email" autocomplete="email" required>
+                <label for="iemail"><i class='bx bxs-envelope' ></i> E-mail</label>
+            </div>
+            <div class="input">
+                <input type="password" id="isenha" name="senha" required>
+                <label for="isenha"><i class='bx bx-key'></i> Senha</label>
+                <div class="view" onclick="mostrasenha()"><i class='bx bx-show'></i></div>
+            </div>
+            <div class="input"> 
+                <input type="password" id="isenha2" name="senha2" required>
+                <label for="isenha2"><i class='bx bx-key'></i> Confirme a Senha</label>
+                <div class="view2" onclick="mostrasenhaconfirm()"><i class='bx bx-show'></i></div>
+            </div>
+            <div class="input">
+                <input type="text" id="icpf" name="cpf" minlength="14" maxlength="14" required>
+                <label for="icpf"><i class='bx bx-detail'></i> CPF</label>
+            </div>
+            <div class="botao">
+                <button type="reset" value="Limpar"><i class='bx bx-trash'></i> Limpar</button>
+                <button type="submit" value="Enviar">Enviar <i class='bx bxs-send'></i></button>
+            </div>
+        </form>
+    </main>
+
+    <main id="confirm">
+        <h1>Confirme seus Dados</h1>
+        <div id="res"></div>
+
+        <div class="botao">
+            <button onclick="voltar()">Voltar</button>
+            <button onclick="confirmar()">Confirmar</button>
+        </div>
+    </main>
+
+    <main id="sucesso">
+        <h1>Seus dados foram registrados com sucesso!</h1>
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
